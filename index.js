@@ -1,4 +1,16 @@
 console.log('Tarea 2/04/2025')
+const integrantes = [
+    "PEREDA ZARATE, GIANMARKO JOEL",
+    "RODRIGUEZ LEYTTH, EYVIN NIL",
+    "DIAZ GONZALES, BRUNO ALEXANDER",
+    "PEÑA GARCIA, GUILLERMO EDUARDO",
+    "NORIEGA NORIEGA, ARTURO MANUEL"
+  ];
+
+console.log("Lista de integrantes:");
+integrantes.forEach(nombre => {
+  console.log(nombre);
+})
 
 const productos = [
     {
