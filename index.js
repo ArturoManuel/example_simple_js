@@ -135,12 +135,21 @@ const productos = [
 
 
   function searchByName(query) {
-    const results = productos.filter(product =>
-      product.name.toLowerCase().includes(query.toLowerCase())
-    );
-    
+    // se extrae el arreglo 
+    const productos = JSON.parse(evento).arreglo; 
+    const results = [];
+  
+    for (let i = 0; i < productos.length; i++) {
+     // se busca los productos
+      const producto = productos[i];
+      if (producto.name.toLowerCase().includes(query.toLowerCase())) {
+        results.push(producto);
+      }
+    }
+  
     return results;
   }
+  
 
   function listProducts(){
     const arrayProducto = JSON.parse(evento);
@@ -163,13 +172,11 @@ const productos = [
     console.log(resultados.length === 0 ? 'No se encontró un resultado': resultados);
       
 
-    // intenta comprar el producto
-    //compra el producto
-    // recibe el comprobante de compra
 
 
   }
 
+  start()
 
   
   
